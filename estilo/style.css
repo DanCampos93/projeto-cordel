@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Work+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif; /*padrão*/
+    --fonte2:'Passion One', cursive; /*Titulos*/
+    --fonte3: 'Sriracha', cursive; /*Conteudo*/
+}
+
+/*Configurações gerais para resetar todos os elementos*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-size: 1em;
+}
+
+html, body {
+    min-height: 100vh; /*tamanho minimo*/
+    background-color: darkgray;
+    font-family: var(--fonte1);
+}
+
+header {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header h1 {
+    padding-top: 50px;
+    /*text-transform: uppercase; tudo em letra maiscula*/
+    font-variant: small-caps; /*Continua com as letras maisculas, mas as primeiras são maiores.*/
+    font-family: var(--fonte2);
+    font-size: 10vw; /*10% da largura da tela; A letra se ajusta ao tamanho da tela*/
+}
+
+header p {
+    padding-bottom: 50px;
+}
+
+/*Links de forma especifica, caso deseje colocar links dentro do texto sem sofrer tais configurações*/
+header a, footer a {
+    color: white;
+    text-decoration: none; /*Tirou o sublinhado*/
+    font-weight: bolder; /*Negrito*/
+}
+
+header a:hover, footer a:hover {
+    text-decoration: underline; /*Quando passar o mouse, ficará sublinhado*/
+}
+
+/*Serve para todas as section*/
+section {
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    line-height: 2em; /*Espaço entre as linhas*/
+    padding-left: 30px; /*Afastamento do texto pela esquerda*/
+    font-family: var(--fonte3);
+    font-size: 3.5vw; /*3.5% da largura da tela; A letra se ajusta ao tamanho da tela*/
+}
+
+section.normal {
+    background-color: white;
+    color: black;
+}
+
+section p {
+    padding-bottom: 2em; /*Espaço entre os paragrafos */
+}
+
+section.imagem {
+    background-color: rgb(51, 51, 51);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.327); /*Sombra interna da caixa*/
+    background-attachment: fixed; /*Efeito paralax*/
+}
+
+/*Configuração para a preparação das imagens*/
+section.imagem p {
+    display: inline-block; /*caixa que de adéqua ao tamanho do conteudo*/
+    padding: 5px; /*letras não ficarem coladas na caixa*/
+    background-color: rgba(0, 0, 0, 0.378);
+    text-shadow: 1px 1px 0px black; /*Sombra no texto*/
+}
+
+section#img01 {
+    background-image: url(../imagens/background001.jpg);
+    background-position: right center; /*posição da imagem*/
+    background-size: cover; /*Adpatar o tamanho da imagem*/
+}
+
+section#img02 {
+    background-image: url(../imagens/background002.jpg);
+    background-size: cover;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
